@@ -1,4 +1,4 @@
-\# Credit Card Default Prediction
+# Credit Card Default Prediction
 
 
 
@@ -10,11 +10,11 @@ The project includes exploratory data analysis, comparison of multiple machine l
 
 
 
-\---
+---
 
 
 
-\## 📌 Project Overview
+## 📌 Project Overview
 
 
 
@@ -38,11 +38,11 @@ The final trained model is integrated into a Streamlit application where users c
 
 
 
-\---
+---
 
 
 
-\## 🎯 Problem Statement
+## 🎯 Problem Statement
 
 
 
@@ -68,11 +68,11 @@ The project focuses on:
 
 
 
-\---
+---
 
 
 
-\## 📊 Dataset
+## 📊 Dataset
 
 
 
@@ -106,7 +106,7 @@ Important features include:
 
 
 
-\### Target Variable
+### Target Variable
 
 
 
@@ -124,11 +124,11 @@ Where:
 
 
 
-\---
+---
 
 
 
-\## 🔍 Exploratory Data Analysis
+## 🔍 Exploratory Data Analysis
 
 
 
@@ -162,11 +162,11 @@ Categorical values were also cleaned and grouped where appropriate.
 
 
 
-\---
+---
 
 
 
-\## 🤖 Machine Learning Models
+## 🤖 Machine Learning Models
 
 
 
@@ -196,11 +196,11 @@ Stratified splitting was used to preserve the target class distribution.
 
 
 
-\---
+---
 
 
 
-\## 📈 Model Evaluation
+## 📈 Model Evaluation
 
 
 
@@ -222,7 +222,7 @@ The models were evaluated using:
 
 
 
-\### Model Comparison
+### Model Comparison
 
 
 
@@ -238,7 +238,7 @@ The models were evaluated using:
 
 
 
-\### Final Model
+### Final Model
 
 
 
@@ -250,11 +250,11 @@ The trained model is saved using Joblib and loaded by the Streamlit application.
 
 
 
-\---
+---
 
 
 
-\## 🌐 Streamlit Application
+## 🌐 Streamlit Application
 
 
 
@@ -266,7 +266,7 @@ Users can enter:
 
 
 
-\### Customer Information
+### Customer Information
 
 \- Credit limit
 
@@ -280,13 +280,13 @@ Users can enter:
 
 
 
-\### Payment History
+### Payment History
 
 \- Repayment status for the previous 6 months
 
 
 
-\### Financial Information
+### Financial Information
 
 \- Bill amounts for the previous 6 months
 
@@ -306,11 +306,11 @@ The application then provides:
 
 
 
-\---
+---
 
 
 
-\## 🖥️ Application Workflow
+## 🖥️ Application Workflow
 
 
 
@@ -337,6 +337,7 @@ Prediction + Probability
 &#x20;   ↓
 
 Risk Level
+
 
 
 
