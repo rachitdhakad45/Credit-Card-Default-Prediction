@@ -1,5 +1,7 @@
 import streamlit as st
 import joblib
+from datetime import date
+from dateutil.relativedelta import relativedelta
 
 # Load trained model
 model = joblib.load("models/credit_default_gradient_boosting_model.joblib")
@@ -8,6 +10,25 @@ model = joblib.load("models/credit_default_gradient_boosting_model.joblib")
 feature_names = joblib.load("models/feature_names.joblib")
 
 st.title("Credit Card Default Prediction")
+
+from datetime import date
+
+# Get the current month
+current_date = date.today()
+
+# Generate labels for the last 6 months
+months = []
+year = current_date.year
+month = current_date.month
+
+for _ in range(6):
+    months.append(date(year, month, 1).strftime("%B %Y"))
+    
+    month -= 1
+    if month == 0:
+        month = 12
+        year -= 1
+
 
 # Customer Information
 st.header("Customer Information")
@@ -78,16 +99,16 @@ pay_options = {
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    pay_0 = st.selectbox("September", list(pay_options.keys()))
-    pay_2 = st.selectbox("July", list(pay_options.keys()))
-    
+    pay_0 = st.selectbox(months[0], list(pay_options.keys()))
+    pay_2 = st.selectbox(months[1], list(pay_options.keys()))
+
 with col2:
-    pay_3 = st.selectbox("June", list(pay_options.keys()))
-    pay_4 = st.selectbox("May", list(pay_options.keys()))
+    pay_3 = st.selectbox(months[2], list(pay_options.keys()))
+    pay_4 = st.selectbox(months[3], list(pay_options.keys()))
 
 with col3:
-    pay_5 = st.selectbox("April", list(pay_options.keys()))
-    pay_6 = st.selectbox("March", list(pay_options.keys()))
+    pay_5 = st.selectbox(months[4], list(pay_options.keys()))
+    pay_6 = st.selectbox(months[5], list(pay_options.keys()))
 
 # Bill Amounts
 st.header("Monthly Bill Amounts")
